@@ -21,7 +21,7 @@ class MedicoController extends Controller
     public $array= array();
     public function index()
     {
-        $consultas = DB::select('select * from find_medicos ');
+        $medicos = DB::select('select * from find_medicos ');
 
         $this->ecjson=json_encode($medicos);
         $this->array= (array)json_decode($this->ecjson);
